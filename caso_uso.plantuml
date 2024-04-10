@@ -1,0 +1,21 @@
+@startuml 
+"Main Admin" as Admin
+
+package System {
+    usecase "Admin the application"
+    usecase "Admin roles"
+
+    usecase "Use the aplication"
+    usecase "Case 2"
+    }
+
+usecase "Login"
+User << Human >>
+User <|-- Admin
+User <|-- "General User"
+"General user" --> "Use the aplication"
+Admin --> "Admin the aplication"
+Admin --> "Admin roles"
+"Admin roles" --|> "Login"
+"Use the aplication" ..> "Case 2"
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+
+usecase "checkout"
+usecase "payment"
+usecase "help"
+customer -- "checkout"
+clerk -- "checkout"
+"checkout" ..> "pyament" : include
+"help" ..> "checkout" : extends
+
+@enduml
