@@ -1,0 +1,26 @@
+@startuml
+
+class Animal
+
+class Mascota 
+
+Mascota : pasear()
+Mascota : alimentar()
+Mascota : dar_info()
+Mascota : propietario ()
+
+
+
+Mascota <|-- Perro
+Mascota <|-- Gato
+Mascota <|-- Loro
+
+Mascota *-- Animal
+
+
+
+
+
+
+
+@enduml
